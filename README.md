@@ -1,4 +1,4 @@
-# Github Compact Feed [![tag](https://img.shields.io/github/tag/StylishThemes/GitHub-Compact-Feed.svg)](https://github.com/StylishThemes/GitHub-Compact-Feed/tags)
+# GitHub Compact Feed [![tag](https://img.shields.io/github/tag/StylishThemes/GitHub-Compact-Feed.svg)](https://github.com/StylishThemes/GitHub-Compact-Feed/tags)
 
 A simple userstyle that compacts details in the news feed.
 
@@ -16,7 +16,7 @@ A simple userstyle that compacts details in the news feed.
   * FreeStyler is available for [Chrome](https://chrome.google.com/webstore/detail/freestyler/hihigldmabkodfpehkgdemjklmaebmca).<br>
   * Then install this style using:
     * [userstyles.org](https://userstyles.org/styles/160435/github-compact-feed)
-    * or, add it [manually](https://raw.githubusercontent.com/StylishThemes/Github-Compact-Feed/blob/master/github-compact-feed.user.css) into the editor.
+    * or, add it [manually](https://github.com/StylishThemes/GitHub-Compact-Feed/blob/master/github-compact-feed.user.css) into the editor.
 * Or, **[install directly](https://raw.githubusercontent.com/StylishThemes/Github-Compact-Feed/master/github-compact-feed.user.css)** from this repository by opening the user.css file; only available using Stylus or FreeStyler (see the [documentation](https://github.com/openstyles/stylus/wiki/Usercss)). :tada:
 
 ## Updating
