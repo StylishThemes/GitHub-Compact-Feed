@@ -1,0 +1,59 @@
+/* ==userstyle==
+@name        Github Compact Feed
+@namespace   StylishThemes
+@version     1.0.0
+@description Compact details in the news feed
+@author      StylishThemes
+@homepageURL https://github.com/StylishThemes/Github-Compact-Feed
+@supportURL  https://github.com/StylishThemes/Github-Compact-Feed/issues
+@updateURL   https://raw.githubusercontent.com/StylishThemes/Github-Compact-Feed/master/github-compact-feed.user.css
+@license     CC-BY-SA-4.0
+==/userstyle== */
+
+@-moz-document regexp("^https?:\\/\\/github\\.com(\\/)?$"), regexp("^https?:\\/\\/github\\.com\\/orgs\\/.*\\/dashboard(\\/)?$") {
+  .news .watch_started .border,
+  .news .watch_started .text-gray,
+  .news .watch_started .float-right,
+  .news div > .Details button[data-hydro-click], /* Hide expand button */
+  .news .fork .border,
+  .news .tag .border,
+  .news .git-branch .border,
+  .news .repo .f6, /* Hide created repo update date */
+  .news .issues_opened .border div.lh-condensed, /* Hide issue text */
+  .news .issues_closed .border div.lh-condensed,
+  .news .issues_closed .f6,
+  .news .border .diffstat, /* Hide PR diff stats */
+  .news .issues_reopened .border div.lh-condensed,
+  .news .issues_reopened .f6,
+  .news .issues_comment .message {
+    display: none !important;
+  }
+  .news .watch_started .Details:not(.Details--on) .Details-content--hidden,
+  .news .watch_started .Details .d-flex .border {
+    display: block !important;
+  }
+  .news .watch_started .Details .d-flex .border,
+  .news .issues_opened .border,
+  .news .issues_closed .border {
+    border: 0 !important;
+    background: transparent !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+  }
+  /* Remove extra padding after comment is hidden */
+  .news .repo .border.p-3 {
+    padding-bottom: 0 !important;
+  }
+  .news .issues_opened .border a,
+  .news .issues_closed .border a {
+    display: inline-block !important;
+    white-space: nowrap !important;
+    max-width: 500px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+  /* Edited wiki, move "View the diff" inline */
+  .news .gollum .text-gray .mt-2 {
+    display: inline-block !important;
+  }
+}

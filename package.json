@@ -1,0 +1,11 @@
+{
+  "name": "github-compact-feed",
+  "version": "1.0.0",
+  "description": "Compact details in the news feed",
+  "license": "CC-BY-SA-4.0",
+  "repository": "https://github.com/StylishThemes/github-compact-feed",
+  "homepage": "https://github.com/StylishThemes/github-compact-feed",
+  "scripts": {
+    "authors": "bash tools/authors.sh"
+  }
+}
