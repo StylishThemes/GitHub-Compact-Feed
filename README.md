@@ -1,12 +1,20 @@
 # GitHub Compact Feed [![tag](https://img.shields.io/github/tag/StylishThemes/GitHub-Compact-Feed.svg)](https://github.com/StylishThemes/GitHub-Compact-Feed/tags)
 
-A simple userstyle that compacts details in the news feed.
+A userstyle that compacts and hides details in the news feed.
 
 ## Preview
 
 | Before | After |
 |:------:|:-----:|
 | ![](./images/dashboard-before.png) | ![](./images/dashboard-after.png) |
+
+## Customization
+
+In version 1.1.0+, visibility of feed may be dynamically set within the [Stylus](https://add0n.com/stylus.html)' [configuration popup](https://github.com/openstyles/stylus/wiki/Popup).
+
+![](./images/customization.png)
+
+All feed entries are visible by default. And this customization is *not available* through installation from userstyles.org because you would need to go to that site each time you want to change the visibility of an item.
 
 ## Installing
 
