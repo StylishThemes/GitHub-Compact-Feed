@@ -18,14 +18,16 @@
   .news .fork .border,
   .news .tag .border,
   .news .git-branch .border,
-  .news .repo .f6, /* Hide created repo update date */
+  .news .repo .border .f6, /* Hide created repo update date */
   .news .issues_opened .border div.lh-condensed, /* Hide issue text */
   .news .issues_closed .border div.lh-condensed,
-  .news .issues_closed .f6,
+  .news .issues_closed .border .f6,
   .news .border .diffstat, /* Hide PR diff stats */
   .news .issues_reopened .border div.lh-condensed,
-  .news .issues_reopened .f6,
-  .news .issues_comment .message {
+  .news .issues_reopened .border .f6,
+  .news .issues_comment .message,
+  .news .commit_comment .message,
+  .news .follow .border {
     display: none !important;
   }
   .news .watch_started .Details:not(.Details--on) .Details-content--hidden,
