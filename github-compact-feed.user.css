@@ -1,16 +1,61 @@
 /* ==userstyle==
-@name        Github Compact Feed
-@namespace   StylishThemes
-@version     1.0.1
-@description Compact details in the news feed
-@author      StylishThemes
-@homepageURL https://github.com/StylishThemes/Github-Compact-Feed
-@supportURL  https://github.com/StylishThemes/Github-Compact-Feed/issues
-@updateURL   https://raw.githubusercontent.com/StylishThemes/Github-Compact-Feed/master/github-compact-feed.user.css
-@license     CC-BY-SA-4.0
+@name         Github Compact Feed
+@namespace    StylishThemes
+@version      1.0.1
+@description  Compact and hide details in the news feed
+@author       StylishThemes
+@homepageURL  https://github.com/StylishThemes/Github-Compact-Feed
+@supportURL   https://github.com/StylishThemes/Github-Compact-Feed/issues
+@updateURL    https://raw.githubusercontent.com/StylishThemes/Github-Compact-Feed/master/github-compact-feed.user.css
+@license      CC-BY-SA-4.0
+@preprocessor stylus
+@var checkbox hide_comments "Hide All Comments"  0
+@var checkbox hide_branches "Hide Branch Edits"  0
+@var checkbox hide_closed   "Hide Closing"       0
+@var checkbox hide_follows  "Hide Follows"       0
+@var checkbox hide_forks    "Hide Forks"         0
+@var checkbox hide_open     "Hide Open/Reopen"   0
+@var checkbox hide_stars    "Hide Star"          0
+@var checkbox hide_tags     "Hide Tags"          0
+@var checkbox hide_pushes   "Hide Pushes"        0
+@var checkbox hide_wiki     "Hide Wiki Events"   0
 ==/userstyle== */
 
 @-moz-document regexp("^https?:\\/\\/github\\.com(\\/)?$"), regexp("^https?:\\/\\/github\\.com\\/orgs\\/.*\\/dashboard(\\/)?$") {
+
+  /*** Remove below block prior to posting on USO ***/
+  if hide_comments {
+    .news .issues_comment, .news .commit_comment { display: none !important; }
+  }
+  if hide_branches {
+    .news .git-branch { display: none !important; }
+  }
+  if hide_closed {
+    .news .issues_closed { display: none !important; }
+  }
+  if hide_follows {
+    .news .follow { display: none !important; }
+  }
+  if hide_forks {
+    .news .fork { display: none !important; }
+  }
+  if hide_stars {
+    .news .watch_started { display: none !important; }
+  }
+  if hide_open {
+    .news .issues_opened, .news .issues_reopened { display: none !important; }
+  }
+  if hide_pushes {
+    .news .push { display: none !important; }
+  }
+  if hide_tags {
+    .news .tag { display: none !important; }
+  }
+  if hide_wiki {
+    .news .gollum { display: none !important; }
+  }
+  /*** End USO incompatible block ***/
+
   .news .watch_started .border,
   .news .watch_started .text-gray,
   .news .watch_started .float-right,
