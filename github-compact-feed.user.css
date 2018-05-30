@@ -75,8 +75,10 @@
   .news .follow .border {
     display: none !important;
   }
-  .news .watch_started .Details:not(.Details--on) .Details-content--hidden,
-  .news .watch_started .Details .d-flex .border {
+  .news > div .Details:not(.Details--on) .Details-content--hidden,
+  .news > div .Details .d-flex .border,
+  /* Show star on created/public repos */
+  .news .create .starring-container button[data-hydro-click] {
     display: block !important;
   }
   .news .watch_started .Details .d-flex .border,
