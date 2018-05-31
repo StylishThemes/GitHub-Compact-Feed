@@ -2,6 +2,12 @@
 
 A userstyle that compacts and hides details in the news feed.
 
+Almost all details are hidden in the feed, except:
+
+* New repos and repos made public.
+* Pull request details.
+* Wiki changes maintain a link to the diff.
+
 ## Preview
 
 | Before | After |
