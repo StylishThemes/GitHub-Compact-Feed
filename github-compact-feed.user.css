@@ -14,6 +14,7 @@
 @var checkbox hide_closed   "Hide Closing"       0
 @var checkbox hide_follows  "Hide Follows"       0
 @var checkbox hide_forks    "Hide Forks"         0
+@var checkbox hide_new      "Hide New Repos"     0
 @var checkbox hide_open     "Hide Open/Reopen"   0
 @var checkbox hide_stars    "Hide Star"          0
 @var checkbox hide_tags     "Hide Tags"          0
@@ -42,6 +43,9 @@
   if hide_stars {
     .news .watch_started { display: none !important; }
   }
+  if hide_new {
+    .news .repo, .news .create, .news .public { display: none !important; }
+  }
   if hide_open {
     .news .issues_opened, .news .issues_reopened { display: none !important; }
   }
@@ -56,46 +60,61 @@
   }
   /*** End USO incompatible block ***/
 
-  .news .watch_started .border,
-  .news .watch_started .text-gray,
-  .news .watch_started .float-right,
   .news div > .Details button[data-hydro-click], /* Hide expand button */
-  .news .fork .border,
-  .news .tag .border,
-  .news .git-branch .border,
-  .news .repo .border .f6, /* Hide created repo update date */
-  .news .issues_opened .border div.lh-condensed, /* Hide issue text */
-  .news .issues_closed .border div.lh-condensed,
-  .news .issues_closed .border .f6,
-  .news .border .diffstat, /* Hide PR diff stats */
-  .news .issues_reopened .border div.lh-condensed,
-  .news .issues_reopened .border .f6,
+  .news .watch_started .Box, /* Hide star repo details */
+  .news .watch_started .text-gray, /* Hide text with 2+ stars */
+  .news .fork .border, /* .fork .border not using .Box yet */
+  .news .fork .Box,
+  .news .tag .Box,
+  .news .git-branch .Box,
+  .news .repo .Box .f6, /* Hide created repo update date */
+  .news .public .border .f6,
+  .news .public .Box .f6, /* .public .border not using .Box yet */
   .news .issues_comment .message,
   .news .commit_comment .message,
-  .news .follow .border {
+  .news .issues_comment .Details .mt-2, /* Multiple comments */
+  .news .commit_comment .Details .mt-2, /* Multiple comments */
+  .news .issues_opened .Box div.lh-condensed, /* Hide issue text */
+  .news .issues_closed .Box div.lh-condensed,
+  .news .issues_closed .Box .f6,
+  .news .issues_closed .border .f6,
+  .news .issues_reopened .Box div.lh-condensed,
+  .news .issues_reopened .Box .f6,
+  .news .border .diffstat, /* Hide PR diff stats */
+  .news .follow .Box {
     display: none !important;
   }
   .news > div .Details:not(.Details--on) .Details-content--hidden,
-  .news > div .Details .d-flex .border,
+  .news .watch_started .Details .Box, /* Show multiple star repo names */
+  .news .create .Details .d-flex .Box,
   /* Show star on created/public repos */
   .news .create .starring-container button[data-hydro-click] {
     display: block !important;
   }
-  .news .watch_started .Details .d-flex .border,
-  .news .issues_opened .border,
-  .news .issues_closed .border,
-  .news .issues_reopened .border {
+  .news .watch_started .Details .d-flex .Box,
+  .news .issues_opened .Box,
+  .news .issues_closed .Box,
+  .news .issues_reopened .Box {
     border: 0 !important;
     background: transparent !important;
     padding: 0 !important;
     margin-bottom: 0 !important;
   }
   /* Remove extra padding after comment is hidden */
-  .news .repo .border.p-3 {
-    padding-bottom: 0 !important;
+  .news .p-3,
+  .news .border.p-3, /* Padding after PR diff-stat hidden */
+  .news .repo .Box.p-3,
+  .news .public .border.p-3,
+  .news .public .Box.p-3 {
+    padding-bottom: 5px !important;
+    padding-top: 5px !important;
   }
-  .news .issues_opened .border a,
-  .news .issues_closed .border a {
+  .news p {
+    margin-bottom: 0 !important;
+  }
+  /* Limit issue title width */
+  .news .issues_opened .Box a,
+  .news .issues_closed .Box a {
     display: inline-block !important;
     white-space: nowrap !important;
     max-width: 500px !important;
@@ -105,5 +124,11 @@
   /* Edited wiki, move "View the diff" inline */
   .news .gollum .text-gray .mt-2 {
     display: inline-block !important;
+  }
+  /* Move "# more commits" to bottom right */
+  .news .push .link-gray {
+    float: right !important;
+    top: -2em !important;
+    position: relative !important;
   }
 }
