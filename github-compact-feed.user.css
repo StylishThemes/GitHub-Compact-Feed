@@ -23,7 +23,6 @@
 ==/UserStyle== */
 @-moz-document regexp("^https?:\\/\\/github\\.com(\\/)?$"), regexp("^https?:\\/\\/github\\.com\\/orgs\\/.*\\/dashboard(\\/)?$") {
 
-  /*** Remove below block prior to posting on USO ***/
   if hide_comments {
     .news .issues_comment, .news .commit_comment { display: none !important; }
   }
@@ -57,34 +56,44 @@
   if hide_wiki {
     .news .gollum { display: none !important; }
   }
-  /*** End USO incompatible block ***/
 
-  .news div > .Details button[data-hydro-click], /* Hide expand button */
-  .news .watch_started .Box, /* Hide star repo details */
-  .news .watch_started .text-gray, /* Hide text with 2+ stars */
-  .news .fork .border, /* .fork .border not using .Box yet */
+  /* Hide expand button */
+  .news div > .Details button[data-hydro-click],
+  /* Hide star repo details */
+  .news .watch_started .Box,
+  /* Hide text with 2+ stars */
+  .news .watch_started .text-gray,
+  /* .fork .border not using .Box yet */
+  .news .fork .border,
   .news .fork .Box,
   .news .tag .Box,
   .news .git-branch .Box,
-  .news .repo .Box .f6, /* Hide created repo update date */
+  /* Hide created repo update date */
+  .news .repo .Box .f6,
   .news .public .border .f6,
-  .news .public .Box .f6, /* .public .border not using .Box yet */
+  /* .public .border not using .Box yet */
+  .news .public .Box .f6,
   .news .issues_comment .message,
   .news .commit_comment .message,
-  .news .issues_comment .Details .mt-2, /* Multiple comments */
-  .news .commit_comment .Details .mt-2, /* Multiple comments */
-  .news .issues_opened .Box div.lh-condensed, /* Hide issue text */
+  /* Multiple comments */
+  .news .issues_comment .Details .mt-2,
+  /* Multiple comments */
+  .news .commit_comment .Details .mt-2,
+  /* Hide issue text */
+  .news .issues_opened .Box div.lh-condensed,
   .news .issues_closed .Box div.lh-condensed,
   .news .issues_closed .Box .f6,
   .news .issues_closed .border .f6,
   .news .issues_reopened .Box div.lh-condensed,
   .news .issues_reopened .Box .f6,
-  .news .border .diffstat, /* Hide PR diff stats */
+  /* Hide PR diff stats */
+  .news .border .diffstat,
   .news .follow .Box {
     display: none !important;
   }
   .news > div .Details:not(.Details--on) .Details-content--hidden,
-  .news .watch_started .Details .Box, /* Show multiple star repo names */
+  /* Show multiple star repo names */
+  .news .watch_started .Details .Box,
   .news .create .Details .d-flex .Box,
   /* Show star on created/public repos */
   .news .create .starring-container button[data-hydro-click] {
@@ -101,7 +110,8 @@
   }
   /* Remove extra padding after comment is hidden */
   .news .p-3,
-  .news .border.p-3, /* Padding after PR diff-stat hidden */
+  /* Padding after PR diff-stat hidden */
+  .news .border.p-3,
   .news .repo .Box.p-3,
   .news .public .border.p-3,
   .news .public .Box.p-3 {
