@@ -1,0 +1,60 @@
+{
+  "preprocessor": "stylus",
+  "variables": {
+    "Hide All Comments": {
+      "type": "checkbox",
+      "label": "hide_comments",
+      "value": "0"
+    },
+    "Hide Branch Edits": {
+      "type": "checkbox",
+      "label": "hide_branches",
+      "value": "0"
+    },
+    "Hide Closing": {
+      "type": "checkbox",
+      "label": "hide_closed",
+      "value": "0"
+    },
+    "Hide Follows": {
+      "type": "checkbox",
+      "label": "hide_follows",
+      "value": "0"
+    },
+    "Hide Forks": {
+      "type": "checkbox",
+      "label": "hide_forks",
+      "value": "0"
+    },
+    "Hide New Repos": {
+      "type": "checkbox",
+      "label": "hide_new",
+      "value": "0"
+    },
+    "Hide Open/Reopen": {
+      "type": "checkbox",
+      "label": "hide_open",
+      "value": "0"
+    },
+    "Hide Stars": {
+      "type": "checkbox",
+      "label": "hide_stars",
+      "value": "0"
+    },
+    "Hide Tags": {
+      "type": "checkbox",
+      "label": "hide_tags",
+      "value": "0"
+    },
+    "Hide Pushes": {
+      "type": "checkbox",
+      "label": "hide_pushes",
+      "value": "0"
+    },
+    "Hide Wiki Events": {
+      "type": "checkbox",
+      "label": "hide_wiki",
+      "value": "0"
+    }
+  }
+}
