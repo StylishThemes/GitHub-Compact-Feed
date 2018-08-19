@@ -1,27 +1,26 @@
-/* ==userstyle==
-@name         Github Compact Feed
-@namespace    StylishThemes
+/* ==UserStyle==
+@name         GitHub Compact Feed
 @version      1.2.0
 @description  Compact and hide details in the news feed
+@namespace    StylishThemes
 @author       StylishThemes
-@homepageURL  https://github.com/StylishThemes/Github-Compact-Feed
-@supportURL   https://github.com/StylishThemes/Github-Compact-Feed/issues
-@updateURL    https://raw.githubusercontent.com/StylishThemes/Github-Compact-Feed/master/github-compact-feed.user.css
+@homepageURL  https://github.com/StylishThemes/GitHub-Compact-Feed
+@supportURL   https://github.com/StylishThemes/GitHub-Compact-Feed/issues
+@updateURL    https://raw.githubusercontent.com/StylishThemes/GitHub-Compact-Feed/master/github-compact-feed.user.css
 @license      CC-BY-SA-4.0
+@advanced checkbox hide_comments "Hide All Comments" 0
+@advanced checkbox hide_branches "Hide Branch Edits" 0
+@advanced checkbox hide_closed   "Hide Closing"      0
+@advanced checkbox hide_follows  "Hide Follows"      0
+@advanced checkbox hide_forks    "Hide Forks"        0
+@advanced checkbox hide_new      "Hide New Repos"    0
+@advanced checkbox hide_open     "Hide Open/Reopen"  0
+@advanced checkbox hide_stars    "Hide Stars"        0
+@advanced checkbox hide_tags     "Hide Tags"         0
+@advanced checkbox hide_pushes   "Hide Pushes"       0
+@advanced checkbox hide_wiki     "Hide Wiki Events"  0
 @preprocessor stylus
-@var checkbox hide_comments "Hide All Comments"  0
-@var checkbox hide_branches "Hide Branch Edits"  0
-@var checkbox hide_closed   "Hide Closing"       0
-@var checkbox hide_follows  "Hide Follows"       0
-@var checkbox hide_forks    "Hide Forks"         0
-@var checkbox hide_new      "Hide New Repos"     0
-@var checkbox hide_open     "Hide Open/Reopen"   0
-@var checkbox hide_stars    "Hide Star"          0
-@var checkbox hide_tags     "Hide Tags"          0
-@var checkbox hide_pushes   "Hide Pushes"        0
-@var checkbox hide_wiki     "Hide Wiki Events"   0
-==/userstyle== */
-
+==/UserStyle== */
 @-moz-document regexp("^https?:\\/\\/github\\.com(\\/)?$"), regexp("^https?:\\/\\/github\\.com\\/orgs\\/.*\\/dashboard(\\/)?$") {
 
   /*** Remove below block prior to posting on USO ***/
