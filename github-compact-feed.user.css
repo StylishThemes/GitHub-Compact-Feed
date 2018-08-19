@@ -22,41 +22,61 @@
 @preprocessor stylus
 ==/UserStyle== */
 @-moz-document regexp("^https?:\\/\\/github\\.com(\\/)?$"), regexp("^https?:\\/\\/github\\.com\\/orgs\\/.*\\/dashboard(\\/)?$") {
-
   if hide_comments {
-    .news .issues_comment, .news .commit_comment { display: none !important; }
+    .news .issues_comment, .news .commit_comment {
+      display: none !important;
+    }
   }
   if hide_branches {
-    .news .git-branch { display: none !important; }
+    .news .git-branch {
+      display: none !important;
+    }
   }
   if hide_closed {
-    .news .issues_closed { display: none !important; }
+    .news .issues_closed {
+      display: none !important;
+    }
   }
   if hide_follows {
-    .news .follow { display: none !important; }
+    .news .follow {
+      display: none !important;
+    }
   }
   if hide_forks {
-    .news .fork { display: none !important; }
+    .news .fork {
+      display: none !important;
+    }
   }
   if hide_stars {
-    .news .watch_started { display: none !important; }
+    .news .watch_started {
+      display: none !important;
+    }
   }
   if hide_new {
-    .news .repo, .news .create, .news .public { display: none !important; }
+    .news .repo, .news .create, .news .public {
+      display: none !important;
+    }
   }
   if hide_open {
-    .news .issues_opened, .news .issues_reopened { display: none !important; }
+    .news .issues_opened, .news .issues_reopened {
+      display: none !important;
+    }
   }
   if hide_pushes {
-    .news .push { display: none !important; }
+    .news .push {
+      display: none !important;
+    }
   }
   if hide_tags {
-    .news .tag { display: none !important; }
+    .news .tag {
+      display: none !important;
+    }
   }
   if hide_wiki {
-    .news .gollum { display: none !important; }
+    .news .gollum {
+      display: none !important;
+    }
   }
-
   /* Hide expand button */
   .news div > .Details button[data-hydro-click],
   /* Hide star repo details */
@@ -64,31 +84,25 @@
   /* Hide text with 2+ stars */
   .news .watch_started .text-gray,
   /* .fork .border not using .Box yet */
-  .news .fork .border,
-  .news .fork .Box,
-  .news .tag .Box,
-  .news .git-branch .Box,
+  .news .fork .border, .news .fork .Box,
+  .news .tag .Box, .news .git-branch .Box,
   /* Hide created repo update date */
   .news .repo .Box .f6,
   .news .public .border .f6,
   /* .public .border not using .Box yet */
   .news .public .Box .f6,
-  .news .issues_comment .message,
-  .news .commit_comment .message,
+  .news .issues_comment .message, .news .commit_comment .message,
   /* Multiple comments */
   .news .issues_comment .Details .mt-2,
   /* Multiple comments */
   .news .commit_comment .Details .mt-2,
   /* Hide issue text */
   .news .issues_opened .Box div.lh-condensed,
-  .news .issues_closed .Box div.lh-condensed,
-  .news .issues_closed .Box .f6,
-  .news .issues_closed .border .f6,
-  .news .issues_reopened .Box div.lh-condensed,
+  .news .issues_closed .Box div.lh-condensed, .news .issues_closed .Box .f6,
+  .news .issues_closed .border .f6, .news .issues_reopened .Box div.lh-condensed,
   .news .issues_reopened .Box .f6,
   /* Hide PR diff stats */
-  .news .border .diffstat,
-  .news .follow .Box {
+  .news .border .diffstat, .news .follow .Box {
     display: none !important;
   }
   .news > div .Details:not(.Details--on) .Details-content--hidden,
@@ -99,10 +113,8 @@
   .news .create .starring-container button[data-hydro-click] {
     display: block !important;
   }
-  .news .watch_started .Details .d-flex .Box,
-  .news .issues_opened .Box,
-  .news .issues_closed .Box,
-  .news .issues_reopened .Box {
+  .news .watch_started .Details .d-flex .Box, .news .issues_opened .Box,
+  .news .issues_closed .Box, .news .issues_reopened .Box {
     border: 0 !important;
     background: transparent !important;
     padding: 0 !important;
@@ -112,9 +124,7 @@
   .news .p-3,
   /* Padding after PR diff-stat hidden */
   .news .border.p-3,
-  .news .repo .Box.p-3,
-  .news .public .border.p-3,
-  .news .public .Box.p-3 {
+  .news .repo .Box.p-3, .news .public .border.p-3, .news .public .Box.p-3 {
     padding-bottom: 5px !important;
     padding-top: 5px !important;
   }
@@ -122,8 +132,7 @@
     margin-bottom: 0 !important;
   }
   /* Limit issue title width */
-  .news .issues_opened .Box a,
-  .news .issues_closed .Box a {
+  .news .issues_opened .Box a, .news .issues_closed .Box a {
     display: inline-block !important;
     white-space: nowrap !important;
     max-width: 500px !important;
