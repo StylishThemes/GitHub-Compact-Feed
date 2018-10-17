@@ -78,7 +78,7 @@
     }
   }
   /* Hide expand button */
-  .news div > .Details button[data-hydro-click],
+  .news div > .Details .js-details-target,
   /* Hide star repo details */
   .news .watch_started .Box,
   /* Hide text with 2+ stars */
@@ -105,8 +105,9 @@
   .news .border .diffstat, .news .follow .Box {
     display: none !important;
   }
-  .news > div .Details:not(.Details--on) .Details-content--hidden,
+  .news > div .Details:not(.Details--on) div.Details-content--hidden,
   /* Show multiple star repo names */
+  .news .fork .Details .Box,
   .news .watch_started .Details .Box,
   .news .create .Details .d-flex .Box,
   /* Show star on created/public repos */
