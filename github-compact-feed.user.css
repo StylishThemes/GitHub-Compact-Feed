@@ -21,7 +21,7 @@
 @advanced checkbox hide_wiki     "Hide Wiki Events"  0
 @preprocessor stylus
 ==/UserStyle== */
-@-moz-document regexp("^https?:\\/\\/github\\.com(\\/)?$"), regexp("^https?:\\/\\/github\\.com\\/orgs\\/.*\\/dashboard(\\/)?$") {
+@-moz-document regexp("^https?:\\/\\/github\\.com(\\/)?$"), regexp("^https?:\\/\\/github\\.com\\/(orgs\\/.*\\/)?dashboard(\\/)?$") {
   if hide_comments {
     .news .issues_comment, .news .commit_comment {
       display: none !important;
