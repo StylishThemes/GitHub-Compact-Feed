@@ -43,12 +43,12 @@
     }
   }
   if hide_forks {
-    .news .fork {
+    .news .fork, .fork.js-feed-item-view, [classes*="fork js-feed-item-view"] {
       display: none !important;
     }
   }
   if hide_stars {
-    .news .watch_started {
+    .news .watch_started, .watch_started.js-feed-item-view, [classes*="watch_started js-feed-item-view"] {
       display: none !important;
     }
   }
