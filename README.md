@@ -1,3 +1,5 @@
+**Retired:** this style no longer matches GitHub's current markup.
+
 # GitHub Compact Feed [![tag](https://img.shields.io/github/tag/StylishThemes/GitHub-Compact-Feed.svg)](https://github.com/StylishThemes/GitHub-Compact-Feed/tags)
 
 A userstyle that compacts and hides details in the news feed.
